@@ -1,3 +1,5 @@
+`!git clone https://github.com/skorokithakis/Dreambooth-Stable-Diffusion.git`
+
 # Index
 
 - [Notes by Joe Penna](#notes-by-joe-penna)
@@ -42,9 +44,9 @@ Now, if you wanna try to do this... please read the warnings below first:
 - Unfreezing the model takes a lot of juice.
   - ~~You're gonna need an A6000 / A40 / A100 (or similar top-of-the-line thousands-of-dollars GPU).~~
   - You can now run this on a GPU with 24GB of VRAM (e.g. 3090). Training will be slower, and you'll need to be sure this is the *only* program running.
-  - If, like myself, you don't happen to own one of those, I'm including a Jupyter notebook here to help you run it on a rented cloud computing platform. 
+  - If, like myself, you don't happen to own one of those, I'm including a Jupyter notebook here to help you run it on a rented cloud computing platform.
   - It's currently tailored to [runpod.io](https://runpod.io?ref=n8yfwyum), but can work on [vast.ai](#vast-ai-setup) / etc.
-  
+
 - This implementation does not fully implement Google's ideas on how to preserve the latent space.
 
   - Most images that are similar to what you're training will be shifted towards that.
@@ -52,7 +54,7 @@ Now, if you wanna try to do this... please read the warnings below first:
 
 - There doesn't seem to be an easy way to train two subjects consecutively. You will end up with an `11-12GB` file before pruning.
   - The provided notebook has a pruner that crunches it down to `~2gb`
-  
+
 - Best practice is to change the token to a celebrity name. Here's [my wife trained with the exact same settings, except for the token](#using-the-generated-model)
 
 
@@ -80,7 +82,7 @@ Now, if you wanna try to do this... please read the warnings below first:
 - Click `Notebook -> Python 3` (You can do this next step a number of ways, but I typically do this)
   - ![img.png](readme-images/vast-ai-step4-get-repo.png)
 - Clone Joe's repo with this command
-  - `!git clone https://github.com/JoePenna/Dreambooth-Stable-Diffusion.git`
+  - `!git clone https://github.com/skorokithakis/Dreambooth-Stable-Diffusion.git`
   - Click `run`
   - ![img.png](readme-images/vast-ai-step5-clone-repo.png)
 - Navigate into the new `Dreambooth-Stable-Diffusion` directory on the left and open the `dreambooth_runpod_joepenna.ipynb` file
@@ -120,7 +122,7 @@ Same prompt for all of these images below:
 
 | `sks` | `woman` | `Natalie Portman` | `Kate Mara` |
 | ----- | ------- | ----------------- | ----------- |
-| <img src="https://user-images.githubusercontent.com/100188076/192403506-ab96c652-f7d0-47b0-98fa-267defa1e511.png" width="200"> | <img src="https://user-images.githubusercontent.com/100188076/192403491-cb258777-5091-4492-a6cc-82305fa729f4.png" width="200"> | <img src="https://user-images.githubusercontent.com/100188076/192403437-f9a93720-d41c-4334-8901-fa2d2a10fe36.png" width="200"> | <img src="https://user-images.githubusercontent.com/100188076/192403461-1f6972d9-64d0-46b0-b2ed-737e47aae31e.png" width="200"> |   
+| <img src="https://user-images.githubusercontent.com/100188076/192403506-ab96c652-f7d0-47b0-98fa-267defa1e511.png" width="200"> | <img src="https://user-images.githubusercontent.com/100188076/192403491-cb258777-5091-4492-a6cc-82305fa729f4.png" width="200"> | <img src="https://user-images.githubusercontent.com/100188076/192403437-f9a93720-d41c-4334-8901-fa2d2a10fe36.png" width="200"> | <img src="https://user-images.githubusercontent.com/100188076/192403461-1f6972d9-64d0-46b0-b2ed-737e47aae31e.png" width="200"> |
 
 # <a name="debugging-your-results"></a> Debugging your results
 ### ❗❗ THE NUMBER ONE MISTAKE PEOPLE MAKE ❗❗
